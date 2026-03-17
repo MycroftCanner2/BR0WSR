@@ -2,6 +2,7 @@ const { contextBridge, ipcRenderer } = require('electron')
 
 contextBridge.exposeInMainWorld('browser', {
   onBlockerReady: (cb) => ipcRenderer.on('blocker-ready', () => cb()),
+  getPlatform:    ()     => ipcRenderer.invoke('get-platform'),
   auth: {
     check:       ()     => ipcRenderer.invoke('auth-check'),
     fingerprint: ()     => ipcRenderer.invoke('auth-fingerprint'),

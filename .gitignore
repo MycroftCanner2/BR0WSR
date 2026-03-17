@@ -1,1 +1,24 @@
+# Dependencies
 node_modules/
+
+# Build outputs
+dist/
+build/*.ico
+build/*.icns
+build/*.bmp
+build/*.png
+
+# OS files
+.DS_Store
+Thumbs.db
+*.log
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Package manager lock files (optional - uncomment if you want to ignore)
+# package-lock.json
+# yarn.lock
